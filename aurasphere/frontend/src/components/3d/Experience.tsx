@@ -3,7 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import { useThree, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import CoreVisualizer from './CoreVisualizer';
+import Planet from './Planet';
 import { StemIcon } from './StemIcon';
 import { Color } from 'three';
 import { useAudioEngine } from '../../hooks/useAudioEngine';
@@ -77,7 +77,7 @@ export const Experience: React.FC<ExperienceProps> = ({ stems, stemPositions, se
       <pointLight position={[5, 5, 5]} intensity={1.5} castShadow shadow-mapSize-width={1024} shadow-mapSize-height={1024} />
       <OrbitControls enabled={!isDragging} />
 
-      <CoreVisualizer />
+      <Planet />
 
       {stems.map((stem, index) => (
         <StemIcon
